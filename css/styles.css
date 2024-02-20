@@ -1,0 +1,219 @@
+body {
+    margin: 0;
+    font-family: 'PT Sans';
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+    background-color: #FFFFFF;
+}
+
+/* header */
+.navigation {
+  display: flex;
+  width: 1200px;
+  height: 64px;
+  justify-content: space-between;
+  padding: 0 70px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.sedona-logo {
+  width: 140px;
+  height: 70px;
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  max-width: 339px;
+  margin-right: 30px;
+}
+
+.navigation-item a {
+  font-size: 20px;
+  line-height: 24px;
+  text-decoration: none;
+  padding: 20px 16px;
+}
+
+.user-navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+}
+
+/* main */
+
+.main-content {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* promo */
+.promo h2 {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.promo p {
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* advantages */
+
+/* Welcome */
+
+.welcome h2 {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.welcome p {
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* Icons */
+
+.icons-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.icon {
+  width: 400px;
+  height: 385px;
+}
+
+.icons h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.icons p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: center;
+}
+
+/* Hotel search */
+
+.hotel-search h2 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.hotel-search p {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+}
+
+.hotel-search a {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Subscribe */
+
+.subscribe h2 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.subscribe p {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+}
+
+.field {
+ font-size: 18px;
+ font-weight: 400;
+ line-height: 24px;
+ text-align: left;
+}
+
+.subscribe-button {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 232px;
+  height: 52px;
+}
+
+.subscribe-form {
+
+}
+
+.field {
+  width: 452px;
+  height: 52px;
+}
+
+/* footer */
+
+.page-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-item {
+  display: flex;
+  justify-content: space-between;
+  width: 142px;
+  list-style: none;
+}
+
+.phone {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 40px;
+  text-align: center;
+}

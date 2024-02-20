@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
@@ -39,7 +40,7 @@
           </a>
         </li>
         <li class="user-navigation-item">
-          <a class="button" href="#">Хочу сюда!</a>
+          <a class="button user-button" href="#">Хочу сюда!</a>
         </li>
       </ul>
     </nav>
@@ -47,43 +48,43 @@
 
   <main class="main-content" data-test="main">
     <h1 class="visually-hidden">Седона</h1>
-    <img class="hero-image" src="images/main/index-background.jpg" width="1200" height="485">
 
     <!-- Hero -->
     <section class="hero" data-test="hero">
-      <img class="hero-image" src="images/main/welcome.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona. Beacuse the Grand Canyon sucks!">
+      <img class="welcome-image" src="images/main/welcome.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona. Beacuse the Grand Canyon sucks!">
       <h2>Седона — небольшой городок в Аризоне,<br>заслуживающий большего!</h2>
       <p>Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+      <img class="hero-background" src="images/main/index-background.jpg" width="1200" height="485" alt="#">
     </section>
 
     <!-- Преимущества -->
     <section class="advantages" data-test="advantages">
       <h2 class="visually-hidden">Преимущества</h2>
       <ul class="advantages-list">
-        <li class="advantages-item">
+        <li class="advantages-item item-1">
           <h3>Настоящий<br>городок</h3>
           <p>Седона — не аттракцион для<br>туристов, там течёт своя<br>жизнь</p>
           <img class="advantages-img" src="images/main/photo-1.jpg" width="800" height="385" alt="Open Range">
         </li>
-        <li class="advantages-item">
+        <li class="advantages-item item-2">
           <h3>Небольшая<br>площадь</h3>
           <p>Все достопримечательности<br>находятся очень близко</p>
         </li>
-        <li class="advantages-item">
+        <li class="advantages-item item-3">
           <h3>Красивая<br>дорога</h3>
           <p>Ехать в Седону из Лас-Вегаса<br>совсем не скучно!<br>
           </p>
         </li>
-        <li class="advantages-item">
+        <li class="advantages-item item-4">
           <h3>Мало<br>туристов</h3>
           <p>Большинство едет в Гранд<br>Каньон и толпится там
           </p>
         </li>
-        <li class="advantages-item">
+        <li class="advantages-item item-5">
           <h3>Там есть<br>мост дьявола</h3>
-          <img class="advantages-img" src="images/main/photo-2.jpg" width="800" height="385" alt="Мост дьявола">
           <p>Да, по нему можно пройти!<br>Если вы осмелитесь,<br>разумеется
           </p>
+          <img class="advantages-img" src="images/main/photo-2.jpg" width="800" height="385" alt="Мост дьявола">
         </li>
       </ul>
     </section>
@@ -98,19 +99,16 @@
     <section class="reasons">
       <h2 class="visually-hidden">Зачем ехать в Седону</h2>
       <ul class="reason-list">
-        <li class="reason">
+        <li class="reason-item item-hotel">
           <h3 class="reason-title">Жильё</h3>
-          <img class="advantage-image" src="images/main/hotel.svg" width="75" height="72>"
           <p class="reason-description">Рекомендуем пожить<br>в настоящем мотеле,<br>всё как в кино!</p>
         </li>
-        <li class="reason">
+        <li class="reason-item item-food">
           <h3 class="reason-title">Еда</h3>
-          <img class="advantage-image" src="images/main/food.svg" width="74" height="70>"
           <p class="reason-description">Всегда заказывайте<br>топовый фирменный бургер,<br>вы не разочаруетесь!</p>
         </li>
-        <li class="reason">
+        <li class="reason-item item-souvenir">
           <h3 class="reason-title">Сувениры</h3>
-          <img class="advantage-image" src="images/main/souvenir.svg" width="75" height="72>"
           <p class="reason-description">Не только китайского,<br>но и настоящего местного<br>производства!</p>
         </li>
       </ul>
@@ -124,10 +122,10 @@
       <a href="catalog.html" class="hotel-search">Поиск гостиницы в Седоне</a>
     </section>
 
-    <!-- Подпишитесь на рассылку-->
+    <!-- Рассылка-->
+    <div class="subscribe-section">
     <section class="subscribe" data-test="subscribe">
      <h2>Подпишитесь на рассылку</h2>
-      <img class="subscribe-backgrpund" src="images/main/subscribe-background.jpg" width="1200" height="414">
       <p>Только полезная информация и никакого спама,<br>
         честное бойскаутское!</p>
       <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -135,11 +133,13 @@
         <input type="text" id="user-email" name="user-email" placeholder="Ваш e-mail">
         <button class="subscribe-button" type="submit">Подписаться</button>
       </form>
-    </section>
+     </section>
+    </div>
   </main>
 
   <!-- Подвал-->
   <footer class="page-footer" data-test="footer">
+    <h2 class="visually-hidden">Контакты</h2>
     <ul class="social-list">
       <li class="social-item">
         <a class="button" href="#">

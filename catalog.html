@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Каталог</title>
+  <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
@@ -39,7 +40,7 @@
           </a>
         </li>
         <li class="user-navigation-item">
-          <a class="button" href="#">Хочу сюда!</a>
+          <a class="button user-button" href="#">Хочу сюда!</a>
         </li>
       </ul>
     </nav>
@@ -48,12 +49,12 @@
   <!-- Главная -->
   <!-- Фильтры -->
   <main class="main-inner" data-test="main">
-   <img class="catalog-filter-image" src="images/catalog-filter/filter-background.jpg" width="1200" height="412">
+   <img class="catalog-filter-image" src="images/catalog-filter/filter-background.jpg" width="1200" height="412" alt="#">
     <header class="inner-header">
-      <h1 class="inner-header-title">Каталог</h1>
+      <h1 class="inner-header-title">Гостиницы Седоны</h1>
       <ul class="breadcrumbs-list">
         <li class="breadcrumps-item">
-          <a class="breadcrumps-link" href="index.html">Главная</a>
+          <a class="breadcrumps-link visually-hidden" href="index.html">Главная</a>
         </li>
         <li class="breadcrumps-item">
           <a class="breadcrumps-link">Гостиницы</a>
@@ -116,21 +117,30 @@
             </li>
           </ul>
         </fieldset>
-      </form>
-    </section>
+
+        <div>
+          <button class="apply-button" type="button">Применить</button>
+        </div>
+        <div>
+          <button class="reseat-button" type="button">Сбросить</button>
+        </div>
+    </form>
+  </section>
 
     <!--Каталог-->
-    <section class="hotel-catalog">
+    <section class="hotel-catalog" data-test="catalog">
 
       <!-- Отображение каталога-->
-      <div class="found-hotels" data-test="catalog">
+      <div class="found-hotels" >
         <h2>Найдено гостиниц:</h2>
-        <span class="found-hotels">38</span>
+        <span class="hotel-number">38</span>
       </div>
 
-      <img class="catalog-view" src="images/catalog-filter/view-tiles.svg" width="16" height="14>"
-      <img class="catalog-view" src="images/catalog-filter/view-slider.svg" width="16" height="14>"
-      <img class="catalog-view" src="images/catalog-filter/view-grid.svg" width="16" height="14>"
+      <div>
+       <button class="catalog-view view-grid"></button>
+       <button class="catalog-view view-slider"></button>
+       <button class="catalog-view view-tiles"></button>
+      </div>
 
       <select class="catalog-select" aria-label="Сортировка">
         <option value="popular">Сначала популярные</option>
@@ -250,7 +260,7 @@
     <!--Пагинация-->
     <section class="pagination">
       <h3 class="visually-hidden">Пагинация</h3>
-      <ul class="pagination">
+      <ul class="pagination-list">
         <li class="pagination-item">
           <a class="pagination-link pagination-current">1</a>
         </li>
@@ -279,11 +289,11 @@
       <h2>Подпишитесь на рассылку</h2>
       <p>Только полезная информация и никакого спама,<br>
         честное бойскаутское!</p>
-      <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-        <label class="visually-hidden" for="user-email">Ваш e-mail</label>
-        <input type="text" id="user-email" name="user-email">
-        <button class="subscribe-button" type="submit">Подписаться</button>
-      </form>
+        <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
+          <label class="visually-hidden" for="user-email">Укажите Ваш e-mail</label>
+          <input type="text" id="user-email" name="user-email" placeholder="Ваш e-mail">
+          <button class="subscribe-button" type="submit">Подписаться</button>
+        </form>
     </section>
   </main>
 
