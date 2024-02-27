@@ -436,7 +436,7 @@ body {
 }
 
 .hotel-image {
-  vertical-align: middle;
+  align-content: middle;
 }
 
 .hotel-title {
@@ -466,7 +466,7 @@ body {
   padding: 8px 26px;
 }
 
-.favorite-button {
+.hotel-favorite-button {
   display: inline-block;
   background-color: #82b3d3;
   padding: 8px 20px;
