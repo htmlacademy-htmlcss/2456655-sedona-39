@@ -14,10 +14,6 @@
   font-display: swap;
 }
 
-html {
-  height: 100%;
-}
-
 body {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
@@ -25,6 +21,8 @@ body {
   font-weight: 400;
   color: #333333;
   background-color: #f2f2f2;
+  margin: 0 auto;
+  min-height: 100vh;
 }
 
 .wrapper {
@@ -33,7 +31,11 @@ body {
   background-color: #ffffff;
   width: 1200px;
   margin: 0 auto;
-  min-height: 100%;
+  min-height: 100vh;
+}
+
+.main-container {
+  flex-grow: 1;
 }
 
 .button {
@@ -68,8 +70,8 @@ body {
 .main-navigation {
   display: flex;
   justify-content: space-between;
-  margin-right: 70px;
   min-height: 64px;
+  padding: 0 70px;
 }
 
 .navigation-list {
@@ -81,7 +83,7 @@ body {
   margin: 0;
   margin-left: 28px;
   margin-right: auto;
-  width: 339px;
+  width: 350px;
 }
 
 .user-navigation-list {
@@ -113,7 +115,6 @@ body {
   color: #ffffff;
   display: block;
   margin-left: 20px;
-
 }
 
 /* hero */
@@ -124,14 +125,13 @@ body {
   background-color: #70a2aa;
   width: 1200px;
   height: 485px;
-  padding-top: 51px;
+
   text-align: center;
 }
 
 /* advantages */
 
 .advantages-title {
-  margin-bottom: 21px;
   padding: 69px 0;
 }
 
@@ -151,7 +151,7 @@ body {
 .advantages-list-item:first-child,
 .advantages-list-item:last-child {
   display: flex;
-  width: 1200px;
+  width: 100%;
 }
 
 .advantages-text {
@@ -195,7 +195,7 @@ body {
 /* reasons */
 
 .reasons-title {
-  padding: 64px;
+  padding: 64px 0;
 }
 
 .reasons-list {
@@ -210,7 +210,7 @@ body {
 
 .reasons-list-item {
   width: 400px;
-  height: 385px;
+  min-height: 385px;
 }
 
 .reasons-text {
@@ -230,8 +230,12 @@ body {
 
 /* search */
 
+.main-search {
+  padding: 96px 304px;
+}
+
 .search-title {
-  padding: 96px 0 54px;
+  margin-bottom: 54px;
 }
 
 .search-button {
@@ -239,7 +243,7 @@ body {
   line-height: 36px;
   background-color: #756157;
   padding: 8px 50px;
-  margin: 0 412px 96px;
+  margin: 0 108px;
   display: block;
 }
 
@@ -251,16 +255,12 @@ body {
   color: #ffffff;
   background-color: #70a2aa;
   margin: 0;
-  padding: 0;
-}
-
-.subscribe-title {
-  padding: 96px 0 54px;
+  padding: 96px 0 104px;
 }
 
 .subscribe-form {
   display: flex;
-  margin: 54px 258px 104px;
+  margin: 54px 258px;
 }
 
 .subscribe-email {
@@ -281,16 +281,17 @@ body {
 .footer {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 40px 70px 30px;
-  margin: 0;
 }
 
 .social-list {
   display: flex;
-  list-style: none;
+  flex-wrap: wrap;
+  min-width: 145px;
   gap: 20px;
-  width: 142px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .phone {
@@ -298,6 +299,7 @@ body {
   line-height: 40px;
   color: #000000;
   text-decoration: none;
+  padding: 8px 0;
 }
 
 .academy-logo {
@@ -387,11 +389,21 @@ body {
 
 /* сортировка результатов */
 
-.found-hotels {
+.hotel-catalog {
+  padding: 6px 0;
+}
+
+.found-hotels-sorting {
   display: flex;
   justify-content: space-between;
-  margin: 50px 0 40px;
-  padding: 6px;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.found-hotels {
+  max-width: 395px;
+  margin: 0;
 }
 
 .sorting-list {
@@ -415,6 +427,11 @@ body {
 
 
 /* карточки гостиниц */
+
+.hotel-catalog {
+  padding: 0 70px;
+}
+
 .hotel-cards-list {
   display: flex;
   flex-wrap: wrap;
@@ -433,6 +450,7 @@ body {
   border: 1px solid #e6e6e6;
   border-radius: 4px;
   gap: 16px;
+  box-sizing: border-box;
 }
 
 .hotel-image {
@@ -473,7 +491,7 @@ body {
   width: 140px;
 }
 
-.button-pressed {
+.button-selected {
   background-color: #7db54f;
   padding: 8px 18px;
 }
@@ -496,6 +514,8 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-top: 80px;
+  margin-bottom: 60px;
   gap: 8px;
 }
 
@@ -504,8 +524,9 @@ body {
   line-height: 36px;
   background-color: #82b3d3;
   padding: 12px 18px;
-  min-width: 60px;
-  height: 60px;
+  width: 60px;
+  min-height: 60px;
+  display: block;
 }
 
 .pagination-link-active {
@@ -515,7 +536,6 @@ body {
   color: #000000;
   padding: 12px 18px;
   min-width: 60px;
-  height: 60px;
 }
 
 .pagination-link-more {
@@ -529,5 +549,5 @@ body {
 .subscribe-no-background {
   background-color: #ffffff;
   margin: 0;
-  padding: 0;
+  padding: 96px 0 104px;;
 }
