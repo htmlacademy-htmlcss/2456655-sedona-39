@@ -338,8 +338,8 @@ body {
 .reasons-text h3::before {
   content: "";
   display: block;
-  width: 75px;
-  height: 72px;
+  width: 76px;
+  height: 76px;
   margin: 0 auto 30px;
   background-position: center;
   background-repeat: no-repeat;
