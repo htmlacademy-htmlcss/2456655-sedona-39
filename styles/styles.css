@@ -956,8 +956,15 @@ body {
   margin-left: 200px;
 }
 
-.sorting-list:hover {
+.sorting-list:hover,
+.sorting-list:focus-visible {
+  border: 2px solid #68a2ca;
+  outline: none;
+}
 
+.sorting-list:disabled {
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.3);
 }
 
 /* кнопки раскладки */
@@ -993,6 +1000,14 @@ body {
   background-image: url("../images/icons/list-view.svg");
 }
 
+.results-view-button:hover,
+.results-view-button:active {
+  border: 2px solid #000000;
+}
+
+.results-view-button:focus-visible {
+  border: 2px solid #68a2ca;
+}
 
 /* карточки гостиниц */
 .hotel-cards-list {
