@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Главная страница Седоны</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="shortcut icon" href="./favicon.ico">
   </head>
 
   <body>
@@ -189,5 +190,83 @@
         </a>
       </footer>
      </div>
+
+     <div class="modal-container modal-container-close">
+      <div class="modal modal-search">
+
+        <button class="button modal-close-button" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+
+          <form class="booking-form" action="#" method="post">
+
+            <fieldset class="modal-box check-in-date-box">
+              <label class="date-box" for="check-in-date">Дата Заезда:</label>
+              <input class="date-input-box input-date" type="text" id="check-in-date" name="check-in-date" value="27 апреля 2020" placeholder="Укажите дату заезда" required>
+            </fieldset>
+
+            <p class="modal-message error-message">Мы не можем отправить вас в прошлое.</p>
+
+            <fieldset class="modal-box check-out-date-box">
+              <label class="date-box" for="check-out-date">Дата Выезда:</label>
+              <input class="date-input-box input-date" type="text" id="check-out-date" name="check-out-date" value="1 сентября 2023" placeholder="Укажите дату отъезда" required>
+            </fieldset>
+
+            <p class="modal-message avail-message">На эти даты есть свободные номера. Пока есть.</p>
+
+            <fieldset class="modal-box adults-box">
+              <legend class="visually-hidden">Количество взрослых гостей</legend>
+              <label class="guest-input-box adults-number" for="adults">Взрослые:</label>
+
+              <div class="guest-number-inner">
+               <button class="minus-mark" type="button">
+                 <span class="visually-hidden">Убрать гостя</span>
+               </button>
+              <input class="input-guest" type="number" id="adults" name="adults" value="2">
+               <button class="plus-mark" type="button">
+                <span class="visually-hidden">Добавить гостя</span>
+               </button>
+              </div>
+            </fieldset>
+
+            <fieldset class="modal-box kids-box">
+              <legend class="visually-hidden">Количество детей</legend>
+              <label class="guest-input-box kids-number" for="kids">Дети:</label>
+
+              <span class="tooltip">
+                <button class="tooltip-button" type="button" aria-labelledby="tooltip-label-date">
+                  <svg class="tooltip-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 26 26">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9 4H11V6H9V4ZM11 16H9V7H11V16Z" fill="white"/>
+                  </svg>
+                <span class="visually-hidden">Посмотреть дополнительную информацию</span>
+                </button>
+                <span class="tooltip-text" role="tooltip" id="tooltip-label-info">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+                </span>
+              </span>
+
+              <div class="guest-number-inner">
+                <button class="minus-mark" type="button">
+                  <span class="visually-hidden">Убрать гостя</span>
+                </button>
+               <input class="input-guest" type="number" id="kids" name="kids" value="2">
+                <button class="plus-mark" type="button">
+                 <span class="visually-hidden">Добавить гостя</span>
+                </button>
+              </div>
+
+            </fieldset>
+
+            <button class="button booking-submit" type="submit">Найти</button>
+          </form>
+
+        </section>
+      </div>
+     </div>
+
+    </div>
+
   </body>
 </html>
