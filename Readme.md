@@ -1,7 +1,10 @@
 # Личный проект «Седона»
 
 * Студент: [Оксана Лановенко](https://up.htmlacademy.ru/htmlcss/39/user/2456655).
-* Наставник: `Неизвестно`.
+* Наставник: [Андрей Грачев](https://htmlacademy.ru/profile/angra).
+* Сайт: [Мой проект Sedona](https://okslan.github.io/2456655-sedona-39/).
+
+
 
 ---
 
