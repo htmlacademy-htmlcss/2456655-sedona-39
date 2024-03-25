@@ -93,13 +93,13 @@ body {
   gap: 28px;
 }
 
+.sedona-logo  {
+  display: block;
+}
+
 .main-navigation-logo {
   margin-bottom: -6px;
   z-index: 1;
-}
-
-.sedona-logo  {
-  display: block;
 }
 
 .main-navigation-logo:focus-visible {
