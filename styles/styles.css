@@ -737,7 +737,6 @@ body {
   outline: 3px solid #82b3d3;
 }
 
-
 /* слайдер */
 .price-choice {
   margin: 0;
@@ -770,7 +769,8 @@ body {
 }
 
 .low-price-input {
-  border-radius: 4px 0 0 4px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
 }
 
 .low-price-input:focus-visible,
@@ -779,7 +779,8 @@ body {
 }
 
 .high-price-input {
-  border-radius: 0 4px 4px 0;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 
 .price-field:hover {
@@ -1262,51 +1263,308 @@ body {
 }
 
 /* модальное окно */
-
 .modal-container {
   position: fixed;
-  left: 0;
   top: 0;
+  left: 0;
+  display: flex;
   width: 100%;
   height: 100%;
   background-color: rgba(242, 242, 242, 0.8);
-  display: flex;
 }
 
-.modal-container-close {
+.modal-container-closed {
   display: none;
+}
+
+.modal-close-button {
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+  padding: 0;
+  border: none;
+  right: 52px;
+  cursor: pointer;
+}
+
+.close-button-icon {
+  position: absolute;
+  content: "";
+  top: 19px;
+  left: 18px;
+  fill: #000000;
+}
+
+.main-navigation-logo {
+  margin-bottom: -6px;
+  z-index: 0;
+}
+
+.modal-close-button:hover {
+  background-color: #e6e6e6;
+}
+
+.modal-close-button:focus-visible {
+  background-color: #e6e6e6;
+  outline: 3px solid #83b3d3;
+}
+
+.modal-close-button:active {
+  background-color: #e6e6e6;
+  outline: none;
+  color: #000000;
+  opacity: 0.3;
 }
 
 .modal {
   position: relative;
   margin: auto;
   padding: 64px 70px;
-  width: 717px;
   background-color: #ffffff;
+  box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  width: 717px;
   border-radius: 30px;
 }
 
 .modal-title {
-  margin-bottom: 64px;
-  margin-right: 164px;
+  font-family: inherit;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000;
+  min-width: 413px;
+  margin: 0 0 64px;
 }
 
-.modal-close-button {
-  position: absolute;
+.modal-form-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-label {
+  display: flex;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: capitalize;
+  padding: 12px 0;
+  width: 137px;
+}
+
+.form-meassage {
   display: block;
-  width: 52px;
-  height: 52px;
-  top: 64px;
-  right: 52px;
-  padding: 0;
-  border: none;
-  border-radius: 50%;
-  background-color: #f2f2f2;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: normal;
+  color: #ff5757;
+  margin: 4px 0 0;
+  padding: 0 20px;
+}
+
+.available-message {
+  color: #333333;
+  min-width: 371px;
+}
+
+.box-content {
+  width: calc(100hv - 137px);
+  margin-bottom: 23px;
+}
+
+.dates-form .input-form {
+  background-image: url("../images/icons/calendar.svg");
+  content: "";
+  background-repeat: no-repeat;
+  background-position: center right 20px;
+  padding: 12px 24px 12px 20px;
+  width: 440px;
   cursor: pointer;
 }
 
-.modal-close-button::after {
+.modal-form-box:active .input-field {
+  background-color: #f2f2f2;
+}
+
+.modal-form-box:hover .input-field {
+  background-color: #e6e6e6;
+}
+
+.modal-form-box .input-field {
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000000;
+  border-radius: 4px;
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.input-field:focus-visible {
+  outline-color: #83b3d3;
+}
+
+.guests-number-form {
+  width: 31px;
+  height: 48px;
+  padding: 14px 10px;
+  border: none;
+  background-color: #f2f2f2;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+  color: inherit;
+}
+
+.guests-number-form:focus-visible {
+  outline-color: #82b3d3;
+}
+
+.number-button {
+  position: relative;
+  font-family: inherit;
+  width: 40px;
+  height: 48px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.number-button:hover,
+.number-button:focus {
+  background-color: #f2f2f2;
+  color:#000000;
+}
+
+.number-button:focus-visible {
+  outline-color: #82b3d3;
+}
+
+.number-minus {
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+}
+
+.button-minus {
   content: "";
   position: absolute;
-  background-image: url(../);
+  fill: rgba(117, 97, 87, 0.3);
+  top: 23px;
+  left: 13px;
+}
+
+.number-plus {
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.button-plus {
+  position: absolute;
+  fill: rgba(117, 97, 87, 0.3);
+  content: "";
+  top: 17px;
+  left: 13px;
+}
+
+.guests-number-form[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.guests-number-form::-webkit-outer-spin-button,
+.guests-number-form::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.guest-number {
+  display: flex;
+}
+
+.guest-box-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tooltip {
+  position: relative;
+  margin: 0 0 0 14px;
+}
+
+.tooltip-toggle {
+  border:none;
+  padding: 0;
+  margin: 0;
+  display: block;
+  width: 26px;
+  height: 26px;
+  background-color:  #83b3d3;
+  background-image: url("../images/icons/info.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.tooltip-text {
+  position: absolute;
+  display: none;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  background-color: #333333;
+  color: #ffffff;
+  text-transform: none;
+  padding: 15px 18px 18px 22px;
+  border-radius: 10px;
+  min-width: 256px;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip-text:after {
+  position: absolute;
+  content: "";
+  background-image: url("../images/icons/tooltip-triangle.svg");
+  width: 19px;
+  height: 9px;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
+}
+
+.modal-search-button {
+  width: 577px;
+  height: 60px;
+  font-size: 20px;
+  line-height: 24px;
+  background-color: #83b3d3;
+  color: #ffffff;
+  margin: 48px auto 0;
+  padding: 0;
+}
+
+.modal-search-button:hover,
+.modal-search-button:focus-visible {
+  background-color: #68a2ca;
+  outline: none;
+}
+
+.modal-search-button:active {
+  background-color: #68a2ca;
+  opacity: 0.3;
 }
