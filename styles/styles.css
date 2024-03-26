@@ -135,7 +135,7 @@ body {
 .current-link::after {
   content: "";
   position: absolute;
-  left: 15px;
+  left: 16px;
   right: 15px;
   bottom: -3px;
   height: 2px;
@@ -197,8 +197,8 @@ body {
   width: 20px;
   height: 20px;
   color: #ffffff;
-  top: 7px;
-  right: 3px;
+  top: 6px;
+  right: 4px;
   border-radius: 50%;
   background-color: #7db54f;
 }
@@ -275,19 +275,35 @@ body {
   color: #ffffff;
 }
 
-.advantages-img {
-  display: block;
-  object-fit: cover;
-  height: 100%;
-}
-
 .advantages-text {
  display: flex;
  flex-direction: column;
  width: 400px;
  min-height: 385px;
- padding: 102px 85px;
  gap: 62px;
+}
+
+.dark-tile-text {
+  padding: 102px 85px;
+}
+
+.light-tile {
+  background-color: #82b3d31f;
+}
+
+.grey-tile {
+  background-color: #82b3d333;
+}
+
+.light-tile-text,
+.grey-tile-text {
+  padding: 112px 85px;
+}
+
+.advantages-img {
+  display: block;
+  object-fit: cover;
+  height: 100%;
 }
 
 .advantages-text h3 {
@@ -302,14 +318,6 @@ body {
 .advantages-text p {
   margin: 0;
   text-align: center;
-}
-
-.light-tile {
-  background-color: #82b3d31f;
-}
-
-.grey-tile {
-  background-color: #82b3d333;
 }
 
 /* разделитель */
