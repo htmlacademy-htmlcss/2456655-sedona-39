@@ -1548,6 +1548,10 @@ body {
   outline-color: #82b3d3;
 }
 
+.guests-number-form:disabled {
+  opacity: 0.8;
+}
+
 .number-button {
   position: relative;
   font-family: inherit;
@@ -1560,10 +1564,6 @@ body {
 
 .number-button:focus-visible {
   outline-color: #82b3d3;
-}
-
-.number-button:disabled {
-  background-color: #e5e5e5;
 }
 
 .number-minus {
@@ -1610,11 +1610,6 @@ body {
   outline: 3px solid #82B3D3;
   border-radius: 4px;
   fill:#000000;
-}
-
-.button-minus:disabled,
-.button-plus:disabled {
-   fill:#ffffff;
 }
 
 .guests-number-form[type="number"] {
