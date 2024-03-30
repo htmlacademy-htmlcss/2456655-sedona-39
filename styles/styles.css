@@ -105,12 +105,16 @@ body {
 .main-navigation-logo {
   margin-bottom: -6px;
   z-index: 1;
+  background-image: url("../images/header/sedona-logo.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 140px;
+  height: 70px;
 }
 
 .main-navigation-logo:hover,
 .main-navigation-logo:focus,
 .main-navigation-logo:focus-visible {
-  outline: none;
   opacity: 0.6;
 }
 
@@ -157,7 +161,6 @@ body {
 .navigation-link:hover,
 .navigation-link:focus-visible {
   color: #756157;
-  outline: none;
 }
 
 .navigation-link:active {
@@ -792,15 +795,18 @@ body {
   outline: 3px solid #82b3d3;
 }
 
-.control-input[type="checkbox"]:disabled,
-.control-input[type="radio"]:disabled {
-  outline: 2px solid rgba(0, 0, 0, 0.3)
+.control-input[type="checkbox"]:disabled + .control-mark,
+.control-input[type="radio"]:disabled + .control-mark {
+  box-shadow: rgba(50, 50, 93, 0.25) 0 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0 18px 36px -18px inset;
+  cursor: none;
 }
 
-.checkbox-label:disabled,
-.radiobuttons-label:disabled {
-  opacity: 0.3;
+.control-input[type="checkbox"]:disabled + .control-label,
+.control-input[type="radio"]:disabled + .control-label {
+  color: #e5e5e5;
+  cursor: none;
 }
+
 
 /* слайдер */
 .price-choice {
@@ -994,7 +1000,6 @@ body {
   opacity: 0.1;
 }
 
-
 /* сортировка */
 .hotel-catalog {
   padding: 50px 70px 60px;
@@ -1041,6 +1046,8 @@ body {
 .sorting-list:disabled {
   border: 2px solid rgba(0, 0, 0, 0.3);
   color: rgba(0, 0, 0, 0.3);
+  background-image: url("../images/icons/arrow-down-disabled.svg");
+  cursor: none;
 }
 
 /* кнопки раскладки */
