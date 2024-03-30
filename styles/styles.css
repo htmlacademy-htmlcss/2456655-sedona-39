@@ -801,9 +801,9 @@ body {
   cursor: none;
 }
 
-.control-input[type="checkbox"]:disabled + .control-label,
-.control-input[type="radio"]:disabled + .control-label {
-  color: #e5e5e5;
+.control-input:disabled + .control-label,
+.control-input:disabled + .control-label {
+  color: #000000;
   cursor: none;
 }
 
