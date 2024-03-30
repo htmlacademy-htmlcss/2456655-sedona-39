@@ -801,9 +801,8 @@ body {
   cursor: none;
 }
 
-.control-input:disabled + .control-label,
-.control-input:disabled + .control-label {
-  color: #000000;
+.control-input:disabled ~ .control-label {
+  color: #e5e5e5;
   cursor: none;
 }
 
@@ -831,6 +830,7 @@ body {
   padding: 12px 20px;
   background-color: #f2f2f2;
   border: none;
+  cursor: pointer;
 }
 
 .price-input::placeholder {
@@ -864,6 +864,12 @@ body {
 
 .price-field:disabled {
   opacity: 0.2;
+  border: 1px solid #000000;
+  cursor: none;
+}
+
+.price-input:disabled::-webkit-input-placeholder {
+  color: transparent;
 }
 
 .price-label {
@@ -931,11 +937,9 @@ body {
   box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.4);
 }
 
-.price-bar:disabled,
 .slider-pin:disabled {
-  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: rgba(50, 50, 93, 0.25) 0 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0 18px 36px -18px inset;
 }
-
 
 /*кнопки */
 .buttons-list {
