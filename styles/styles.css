@@ -105,12 +105,16 @@ body {
 .main-navigation-logo {
   margin-bottom: -6px;
   z-index: 1;
+  background-image: url("../images/header/sedona-logo.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 140px;
+  height: 70px;
 }
 
 .main-navigation-logo:hover,
 .main-navigation-logo:focus,
 .main-navigation-logo:focus-visible {
-  outline: none;
   opacity: 0.6;
 }
 
@@ -157,7 +161,6 @@ body {
 .navigation-link:hover,
 .navigation-link:focus-visible {
   color: #756157;
-  outline: none;
 }
 
 .navigation-link:active {
@@ -792,15 +795,17 @@ body {
   outline: 3px solid #82b3d3;
 }
 
-.control-input[type="checkbox"]:disabled,
-.control-input[type="radio"]:disabled {
-  outline: 2px solid rgba(0, 0, 0, 0.3)
+.control-input[type="checkbox"]:disabled + .control-mark,
+.control-input[type="radio"]:disabled + .control-mark {
+  box-shadow: rgba(50, 50, 93, 0.25) 0 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0 18px 36px -18px inset;
+  cursor: none;
 }
 
-.checkbox-label:disabled,
-.radiobuttons-label:disabled {
-  opacity: 0.3;
+.control-input:disabled ~ .control-label {
+  color: #e5e5e5;
+  cursor: none;
 }
+
 
 /* слайдер */
 .price-choice {
@@ -825,6 +830,7 @@ body {
   padding: 12px 20px;
   background-color: #f2f2f2;
   border: none;
+  cursor: pointer;
 }
 
 .price-input::placeholder {
@@ -858,6 +864,12 @@ body {
 
 .price-field:disabled {
   opacity: 0.2;
+  border: 1px solid #000000;
+  cursor: none;
+}
+
+.price-input:disabled::-webkit-input-placeholder {
+  color: transparent;
 }
 
 .price-label {
@@ -908,30 +920,26 @@ body {
 .max-pin {
   top: -8px;
   right: 0;
-  color: #ffffff;
 }
 
-.price-bar:hover,
 .slider-pin:hover {
-  background-color: #e6e6e6
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
 }
 
-.slider-pin:focus,
 .slider-pin:focus-visible {
-  border: 3px solid #82b3d3;
+  border: 3px solid #83b3d3;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
   outline: none;
 }
 
 .slider-pin:active {
-  border: 2px solid #82b3d3;
-  outline: none;
+  border: 2px solid #83b3d3;
+  box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.4);
 }
 
-.price-bar:disabled,
 .slider-pin:disabled {
-  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: rgba(50, 50, 93, 0.25) 0 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0 18px 36px -18px inset;
 }
-
 
 /*кнопки */
 .buttons-list {
@@ -996,7 +1004,6 @@ body {
   opacity: 0.1;
 }
 
-
 /* сортировка */
 .hotel-catalog {
   padding: 50px 70px 60px;
@@ -1043,6 +1050,8 @@ body {
 .sorting-list:disabled {
   border: 2px solid rgba(0, 0, 0, 0.3);
   color: rgba(0, 0, 0, 0.3);
+  background-image: url("../images/icons/arrow-down-disabled.svg");
+  cursor: none;
 }
 
 /* кнопки раскладки */
@@ -1121,6 +1130,7 @@ body {
 .hotel-img {
   display: block;
   max-width: 300px;
+  height: auto;
 }
 
 .hotel-img:hover {
@@ -1140,10 +1150,6 @@ body {
   grid-row: 2/-1;
 }
 
-.hotel-link:focus-visible {
-  outline: none;
-}
-
 .hotel-title {
   display: block;
   font-size: 24px;
@@ -1154,14 +1160,12 @@ body {
 }
 
 .hotel-title:hover,
-.hotel-title:focus,
-.hotel-title:focus-visible {
+.hotel-title:focus {
   color: #756157;
-  outline: none;
 }
 
 .hotel-title:active {
-  color: rgba(117, 97, 87, 0.3);
+  color: rgba(117, 97, 87, 0.6);
 }
 
 .hotel-type {
@@ -1240,9 +1244,11 @@ body {
 }
 
 .stars {
-  width: 18px;
   height: 17px;
-  padding: 10px 0;
+  padding: 18.5px 0;
+  background-image: url("../images/icons/star.svg");
+  background-repeat: space no-repeat;
+  background-position: left center;
 }
 
 .stars-1 {
@@ -1265,21 +1271,12 @@ body {
   width: 107px;
 }
 
-.stars::before {
-  content: "";
-  display: block;
-  height: 17px;
-  background-image: url("../images/icons/star.svg");
-  background-repeat: space no-repeat;
-  background-size: contain;
-}
-
 .rating {
-  font-size: 16px;
-  line-height: 20px;
   background-color: #f2f2f2;
-  padding: 9px 22px 8px 23px;
   text-transform: uppercase;
+  line-height: 20px;
+  font-size: 16px;
+  padding: 9px 22px 8px 23px;
   border-radius: 4px;
 }
 
@@ -1551,6 +1548,10 @@ body {
   outline-color: #82b3d3;
 }
 
+.guests-number-form:disabled {
+  opacity: 0.8;
+}
+
 .number-button {
   position: relative;
   font-family: inherit;
@@ -1563,10 +1564,6 @@ body {
 
 .number-button:focus-visible {
   outline-color: #82b3d3;
-}
-
-.number-button:disabled {
-  background-color: #e5e5e5;
 }
 
 .number-minus {
@@ -1613,11 +1610,6 @@ body {
   outline: 3px solid #82B3D3;
   border-radius: 4px;
   fill:#000000;
-}
-
-.button-minus:disabled,
-.button-plus:disabled {
-   fill:#ffffff;
 }
 
 .guests-number-form[type="number"] {
